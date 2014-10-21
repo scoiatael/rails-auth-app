@@ -1,6 +1,6 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" data-alert class="alert-box alert radius">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br>
-    <%= f.number_field :id %>
-  </div>
-  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -23,11 +19,7 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Confirm", class: "button radius"%>
   </div>
 <% end %>

@@ -15,3 +15,11 @@
  *= require foundation_and_overrides
 
  */
+
+.no-margin {
+  margin: 0px 0px;
+}
+
+.field_with_errors {
+  background-color: red
+}
