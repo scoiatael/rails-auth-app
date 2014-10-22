@@ -1,37 +1,37 @@
-    <nav data-topbar role="navigation" class="top-bar">
-      <ul class="title-area">
-        <li class="name">
-          <h1><%= link_to "Awesome Store"  %></a></h1>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <ul class="right">
-          <li class="divider"></li>
-          <li><%= link_to "Browse Products" %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Price List" %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Contact Us" %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Cart" %></li>
-          <li class="divider"></li>
-          <% if logged_in? %>
-            <li><%= link_to "Users", '#' %></li>
+<nav data-topbar role="navigation" class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "Awesome Store"  %></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "Browse Products" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Price List" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Contact Us" %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Cart" %></li>
+      <li class="divider"></li>
+      <% if logged_in? %>
+        <li><%= link_to "Users", '#' %></li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Account</a>
+          <ul class="dropdown">
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", '#' %></li>
             <li class="divider"></li>
-            <li class="has-dropdown">
-              <a href="#">Account</b></a>
-              <ul class="dropdown">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", '#' %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Log out", logout_path, method: "delete" %>
-                </li>
-              </ul>
+            <li>
+              <%= link_to "Log out", logout_path, method: "delete" %>
             </li>
-          <% else %>
-            <li><%= link_to "Log in", login_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Log in", login_path %></li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
