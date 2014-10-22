@@ -7,16 +7,8 @@
   <section class="top-bar-section">
     <ul class="right">
       <li class="divider"></li>
-      <li><%= link_to "Browse Products" %></li>
-      <li class="divider"></li>
-      <li><%= link_to "Price List" %></li>
-      <li class="divider"></li>
-      <li><%= link_to "Contact Us" %></li>
-      <li class="divider"></li>
-      <li><%= link_to "Cart" %></li>
-      <li class="divider"></li>
       <% if logged_in? %>
-        <li><%= link_to "Users", '#' %></li>
+        <li><%= link_to "Users", '/users'  %></li>
         <li class="divider"></li>
         <li class="has-dropdown">
           <a href="#">Account</a>
