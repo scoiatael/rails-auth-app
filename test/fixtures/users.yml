@@ -4,10 +4,10 @@ one:
   id: 192
   name: "aaa"
   email: "b@b.com"
-  password_digest: "alknasd1322"
+  password_digest: <%= User.digest('password') %>
 
 two:
   id: 1024
   name: "bbb"
   email: "a@a.org"
-  password_digest: "lkhas1230ad"
+  password_digest: <%= User.digest('password') %>
